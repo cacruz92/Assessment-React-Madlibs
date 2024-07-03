@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const WordForm = () => {
+const WordForm = ({createStory}) => {
     const INITIAL_STATE = {
         adjective1: "",
         noun1: "",
@@ -24,13 +24,33 @@ const WordForm = () => {
         }))
     }
 
-    // const handleSubmit = (e) => {}
+    const validateForm = () => {
+        for(const key in formData) {
+            if(formData[key].trim() === ""){
+                return false
+            }
+        }
+        return true
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(validateForm()){
+            createStory(formData);
+            setFormData(INITIAL_STATE);
+        } else{
+            alert("Please fill out every field!")
+        }
+        
+    }
+
+    
 
     return(
         <div className="formContainer">
             <h1>MadLib</h1>
             <h3>Fill out the following form to generate a fun story about coding!</h3>
-            <form className="wordForm">
+            <form className="wordForm" onSubmit={handleSubmit}>
                 
                 <label htmlFor="adjective1">Adjective:</label>
                 <input 
@@ -113,7 +133,7 @@ const WordForm = () => {
                 onChange={handleChange}
                 />
                 <br></br>
-                <label htmlFor="verb3">Verb:</label>
+                <label htmlFor="verb3">Verb ending in "-ed":</label>
                 <input 
                 id="verb3"
                 type="text"
@@ -132,7 +152,7 @@ const WordForm = () => {
                 value={formData.noun4}
                 onChange={handleChange}
                 />
-
+                <br></br>
                 <button>Submit!</button>
             </form>
         </div>
