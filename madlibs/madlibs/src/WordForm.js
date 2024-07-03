@@ -29,7 +29,7 @@ const WordForm = () => {
     return(
         <div className="formContainer">
             <h1>MadLib</h1>
-            <h3>Fill out the following form to generate a fun story about coding!</h>
+            <h3>Fill out the following form to generate a fun story about coding!</h3>
             <form className="wordForm">
                 
                 <label htmlFor="adjective1">Adjective:</label>
@@ -41,28 +41,28 @@ const WordForm = () => {
                 value={formData.adjective1}
                 onChange={handleChange}
                 />
-                                
-                <label htmlFor="noun1">Noun:</label>
+                <br></br>                
+                <label htmlFor="noun1">Noun(plural):</label>
                 <input 
                 id="noun1"
                 type="text"
                 name="noun1"
-                placeholder="Add an noun!"
+                placeholder="Add a plural noun!"
                 value={formData.noun1}
                 onChange={handleChange}
                 />
+                <br></br>
                 
-                
-                <label htmlFor="verb1">Verb:</label>
+                <label htmlFor="verb1">Verb ending in "ing":</label>
                 <input 
                 id="verb1"
                 type="text"
                 name="verb1"
-                placeholder="Add an verb!"
+                placeholder="Add an verb ending in 'ing'!"
                 value={formData.verb1}
                 onChange={handleChange}
                 />
-                
+                <br></br>
                 <label htmlFor="adjective2">Adjective:</label>
                 <input 
                 id="adjective2"
@@ -72,7 +72,7 @@ const WordForm = () => {
                 value={formData.adjective2}
                 onChange={handleChange}
                 />
-                
+                <br></br>
                 <label htmlFor="noun2">Noun:</label>
                 <input 
                 id="noun2"
@@ -82,7 +82,7 @@ const WordForm = () => {
                 value={formData.noun2}
                 onChange={handleChange}
                 />
-                
+                <br></br>
                 <label htmlFor="verb2">Verb:</label>
                 <input 
                 id="verb2"
@@ -92,7 +92,7 @@ const WordForm = () => {
                 value={formData.verb2}
                 onChange={handleChange}
                 />
-                
+                <br></br>
                 <label htmlFor="adjective3">Adjective:</label>
                 <input 
                 id="adjective3"
@@ -102,7 +102,7 @@ const WordForm = () => {
                 value={formData.adjective3}
                 onChange={handleChange}
                 />
-                
+                <br></br>
                 <label htmlFor="noun3">Noun:</label>
                 <input 
                 id="noun3"
@@ -112,7 +112,7 @@ const WordForm = () => {
                 value={formData.noun3}
                 onChange={handleChange}
                 />
-                
+                <br></br>
                 <label htmlFor="verb3">Verb:</label>
                 <input 
                 id="verb3"
@@ -122,7 +122,7 @@ const WordForm = () => {
                 value={formData.verb3}
                 onChange={handleChange}
                 />
-                
+                <br></br>
                 <label htmlFor="noun4">Noun:</label>
                 <input 
                 id="noun4"

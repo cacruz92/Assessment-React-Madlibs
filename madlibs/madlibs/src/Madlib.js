@@ -1,5 +1,5 @@
 import React from "react";
-import WordForm from "./WordForm.Js";
+import WordForm from "./WordForm.js";
 import Story from "./Story";
 
 const Madlib = () => {
